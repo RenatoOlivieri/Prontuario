@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+ <!--   <meta name="description" content="Portfolio/CV/Resume HTML Template"> -->
+
+    <meta name="description" content="Gerador Automatizado de Evolução Médica">
+ 
+	<meta name="keywords" content="Medicina, inteligencia artificial, prontuario, medico">
+    <meta name="author" content="Renato Olivieri">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>Gerador Automatizado de Evolução Médica</title>
+    <!-- Favicon -->
+    <link href="img/favicon.svg" type="image/svg" rel="icon">
+    <!-- All CSS -->
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+
+	<style>
+        /* Ajuste específico da caixa de texto */
+        textarea {
+            width: 80%;
+            max-width: 600px;
+            height: 150px;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-size: 16px;
+            resize: none;
+            margin-top: 20px;
+        }
+
+        textarea::placeholder {
+            color: #888;
+        }
+
+        /* Ajuste específico do botão */
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Ajuste para o texto de resposta */
+        #response {
+            margin-top: 20px;
+            color: white;
+        }
+    </style>
+	
+	
+	</head>
+
+<body>
+    <div id="preloader">
+        <div class="scroll-static"></div>
+    </div>
+    <!-- /preloader -->
+
+    <header>
+        <div class="container">
+            <div class="row no-gutters align-items-center">
+                <div class="col-sm col-9">
+                  <p> <a href="index.html" class="logo-text-2">Renato Olivieri®</a>
+                      <!-- /logo -->
+                  </p>
+                </div>
+                <div class="col-sm col-3 text-lg-right">
+                    <div class="social-icons d-none d-lg-inline-block">
+                        <a href="#"><i class="lni-facebook-filled"></i></a>
+                        <a href="#"><i class="lni-twitter-original"></i></a>
+                        <a href="#"><i class="lni-instagram-original"></i></a>
+                        <a href="#"><i class="lni-linkedin-original"></i></a>
+                    </div>
+                    <!-- /social-icons -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+
+    <nav class="nav-menu">
+        <div class="side-nav-info">
+            <p>Feel free to <a href="contact.html" class="slide-vertical colored" data-splitting>discuss</a> about your project.</p>
+            <div class="social-icons">
+                <a href="#"><i class="lni-facebook-filled"></i></a>
+                <a href="#"><i class="lni-twitter-original"></i></a>
+                <a href="#"><i class="lni-instagram-original"></i></a>
+                <a href="#"><i class="lni-linkedin-original"></i></a>
+            </div>
+        </div>
+        <ul>
+            <li><a href="about.html" class="slide-vertical" data-splitting>About</a></li>
+            <li><a href="resume.html" class="slide-vertical" data-splitting>Resume</a></li>
+            <li><a href="portfolio.html" class="slide-vertical" data-splitting>Portfolio</a></li>
+            <li><a href="blog.html" class="slide-vertical" data-splitting>Blog</a></li>
+            <li><a href="contact.html" class="slide-vertical" data-splitting>Contact</a></li>
+        </ul>
+    </nav>
+    <!-- /nav-menu -->
+
+    <div class="section-standard overlay" style="background-image: url('img/home-cover.jpg');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+                <div class="g-title">
+                    <h4><span>Gerador Automatizado de Evolução Médica</span></h4>
+                    <p>Com base em trechos de prontuário, como evoluções médicas, pareceres de especialistas e anotações de outros profissionais, reorganizamos as informações de forma objetiva, assegurando que nenhum dado relevante seja omitido. Isso proporciona agilidade no processo e aumenta a segurança no atendimento ao paciente.</p>
+                </div>
+
+                <!-- Formulário para inserir dados -->
+                <textarea placeholder="Cole aqui as informações do prontuário..."></textarea>
+                <br>
+                <button type="submit">Gerar Evolução Médica</button>
+                <div id="response"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- /section-standard -->
+
+    <!-- Mantendo os arquivos JavaScript externos -->
+    <script src="js/jquery-v1.12.4.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Função para o botão
+        document.querySelector('button').addEventListener('click', function() {
+            const data = document.querySelector('textarea').value;
+            document.getElementById('response').innerHTML = "Dados recebidos: " + data;
+        });
+    </script>
+</body>
+</html>
